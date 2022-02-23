@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  background-image: url("../assets/images/snow.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
   min-height: 100vh;
   display: flex;
+  align-items: center;
   flex-direction: column;
+}
+h1{ 
+  font-size: 5rem;
+  font-weight: normal;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+
+.countdown-container{ 
+  display: flex;
+}
+
+.big-text{
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 2rem;
+}
+.countdown-element{
+  font-weight: bold;
+  font-size: 3rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.input-container{
+  max-width: 70%;
+  margin-top: 22rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-container span{
+  font-size: 2rem;
+  font-weight: normal;
+}
+.date-input{   
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: auto;
+}
+.date-input input{
+  margin-left: 20px;
+  border-radius: 2rem;
+  width: 200px;
+  height: 50px;
+  padding: 0 60px;
+}
+.description-input{   
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  
+}
+.description-input input{
+  margin-left: 20px;
+  border-radius: 2rem;
+  width: 200px;
+  height: 50px;
+  padding: 0 50px;
 }
