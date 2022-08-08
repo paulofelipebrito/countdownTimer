@@ -2,10 +2,10 @@ import { useEffect,  useState } from 'react';
 import './app.css'
 
 function App() {
-  const [newYears, setNewYears] = useState('1 Jan 2023');
-  const newYearsDate = new Date(newYears);
+  const [date, setDate] = useState('1 Jan 2023');
+  const selectedDate = new Date(date);
   const currentDate = new Date();
-  const [totalSeconds, setTotalSeconds] = useState((newYearsDate - currentDate) / 1000);
+  const [totalSeconds, setTotalSeconds] = useState((selectedDate - currentDate) / 1000);
   const [days, setDays] = useState(Math.floor(totalSeconds / 3600 / 24));
   const [hours, setHours] = useState(Math.floor(totalSeconds / 3600) % 24);
   const [minutes, setMinutes] = useState(Math.floor(totalSeconds / 60) % 60);
@@ -15,7 +15,7 @@ function App() {
   const [nameEvent, setNameEvent] = useState('New Years Eve');
 
   function countdown(){    
-    setTotalSeconds((newYearsDate - currentDate) / 1000)
+    setTotalSeconds((selectedDate - currentDate) / 1000)
     setDays(Math.floor(totalSeconds / 3600 / 24));
     setHours(Math.floor(totalSeconds / 3600) % 24);
     setMinutes(Math.floor(totalSeconds / 60) % 60);
@@ -30,7 +30,7 @@ function App() {
     setNameEvent(event.target.value);
   }
   function handleChangeDate(event){
-    setNewYears(event.target.value);
+    setDate(event.target.value);
   }
 
   useEffect(() => {    
@@ -74,7 +74,7 @@ function App() {
       <div className="input-container">
         <div className="date-input">
           <span>Write the date you want to countdown eg. (1 Jan 2023)</span>
-          <input type="text" value={newYears} onChange={handleChangeDate}>
+          <input type="text" value={date} onChange={handleChangeDate}>
           </input>
         </div>
         <div className="description-input">

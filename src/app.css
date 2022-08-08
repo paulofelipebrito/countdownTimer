@@ -36,12 +36,14 @@ h1{
   flex-direction: column;
 }
 .input-container{
-  max-width: 70%;
-  margin-top: 22rem;
+  max-width: 75%;
+  margin-top: 17rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  background-color: rgba(7, 30, 45, 0.35);
+  color: white;
 }
 .input-container span{
   font-size: 2rem;
